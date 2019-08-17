@@ -7,8 +7,12 @@
 .scene {
   height: 480px;
   width: 200px;
-  perspective: 600px;
+  perspective: 1000px;
   border: 1px solid white;
+}
+
+.dev-tilt {
+  transform: rotateZ(5deg);
 }
 
 .crystal {
@@ -22,52 +26,79 @@
 }
 
 .dev-rotate {
-  transform: translateZ(-50px) rotateY(-50deg);
+  animation: dev-spin 10s linear infinite;
+}
+
+.crystal__hemisphere {
+  height: 240px;
+  width: 100px;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
 .crystal__face {
   position: absolute;
-  /* height: calc(100% * 13 / 12);
-  width: 100%; */
-  height: 0;
-  width: 0;
   opacity: 0.5;
   border-style: solid;
-  border-width: 0 100px 520px 100px;
+  border-width: 0 100px 260px 100px;
+  transform-origin: 50% 0;
+}
+
+.crystal__top {
+  transform: rotateX(0deg);
 }
 
 .crystal__face-top-front {
-  transform: rotateY(0deg) rotateX(11.31deg) translateZ(50px);
-  /* background-color:blue; */
+  transform: rotateY(0deg) rotateX(22.62deg);
   border-color: transparent transparent blue transparent;
 }
 
 .crystal__face-top-right {
-  transform: rotateY(90deg) rotateX(11.31deg) translateZ(50px);
-  /* background-color: green; */
-  border-color: transparent transparent green transparent;
+  transform: rotateY(90deg) rotateX(22.62deg);
+  border-color: transparent transparent red transparent;
 }
 
 .crystal__face-top-back {
-  
+  transform: rotateY(180deg) rotateX(22.62deg);
+  border-color: transparent transparent green transparent;
 }
 
 .crystal__face-top-left {
-  
+  transform: rotateY(270deg) rotateX(22.62deg);
+  border-color: transparent transparent yellow transparent;
+}
+
+
+.crystal__bottom {
+  transform: rotateX(180deg);
 }
 
 .crystal__face-bottom-front {
-  
+  transform: rotateY(0deg) rotateX(22.62deg);
+  border-color: transparent transparent red transparent;
 }
 
 .crystal__face-bottom-right {
-  
+  transform: rotateY(90deg) rotateX(22.62deg);
+  border-color: transparent transparent blue transparent;
 }
 
 .crystal__face-bottom-back {
-  
+  transform: rotateY(180deg) rotateX(22.62deg);
+  border-color: transparent transparent green transparent;
 }
 
 .crystal__face-bottom-left {
-  
+  transform: rotateY(270deg) rotateX(22.62deg);
+  border-color: transparent transparent yellow transparent;
+}
+
+@keyframes dev-spin {
+  0% {
+    transform: translateZ(-50px) rotateY(0deg);
+  }
+
+  100% {
+    transform: translateZ(-50px) rotateY(360deg);
+  }
 }
