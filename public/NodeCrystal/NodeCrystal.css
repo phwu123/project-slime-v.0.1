@@ -1,12 +1,11 @@
 :host {
-  margin-top: 150px;
   display: flex;
   justify-content: center;
 }
 
 .scene {
-  height: 480px;
-  width: 200px;
+  height: 240px;
+  width: 100px;
   perspective: 1000px;
   border: 1px solid white;
 }
@@ -22,7 +21,7 @@
   color: transparent;
   transition: transform 0.5s linear;
   transform-style: preserve-3d;
-  transform: translateZ(-50px);
+  transform: translateZ(-25px);
 }
 
 .dev-rotate {
@@ -30,7 +29,7 @@
 }
 
 .crystal__hemisphere {
-  height: 240px;
+  height: 120px;
   width: 100px;
   position: relative;
   transform-style: preserve-3d;
@@ -40,7 +39,7 @@
   position: absolute;
   opacity: 0.5;
   border-style: solid;
-  border-width: 0 100px 260px 100px;
+  border-width: 0 50px 130px 50px;
   transform-origin: 50% 0;
 }
 
@@ -95,10 +94,10 @@
 
 @keyframes dev-spin {
   0% {
-    transform: translateZ(-50px) rotateY(0deg);
+    transform: translateZ(-25px) rotateY(0deg);
   }
 
   100% {
-    transform: translateZ(-50px) rotateY(360deg);
+    transform: translateZ(-25px) rotateY(360deg);
   }
 }
