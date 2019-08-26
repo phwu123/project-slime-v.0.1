@@ -4,7 +4,7 @@ const projectSlimeTemplate = `
   <node-crystal></node-crystal>
 `
 customElements.define('project-slime', 
-  class projectSlime extends HTMLElement {
+  class ProjectSlime extends HTMLElement {
     constructor() {
       super()
       this.attachShadow({ mode: 'open' })

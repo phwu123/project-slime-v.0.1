@@ -9,17 +9,27 @@
   border: 1px solid white;
 }
 
+.scene-tilt {
+  transform: rotateZ(5deg);
+}
+
 .ring-container {
   border: 1px solid orange;
   width: 100%;
   height: 100%;
   color: transparent;
   transform-style: preserve-3d;
-  transform: translateZ(-100px);
+  animation: ring-rotate 20s linear infinite;
 }
 
-.dev-ring-tilt {
-  transform: translateZ(-100px) rotateX(15deg);
+@keyframes ring-rotate {
+  0% {
+    transform: translateZ(-100px) rotateY(0deg) rotateX(5deg);
+  }
+
+  100% {
+    transform: translateZ(-100px) rotateY(-360deg) rotateX(5deg);
+  }
 }
 
 .class-ring {
@@ -34,7 +44,17 @@
 
 .node-slot {
   position: absolute;
-  transform: translate(-50%, -50%) rotateX(-90deg);
+  animation: offset-ring-rotate 20s linear infinite;
+}
+
+@keyframes offset-ring-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateX(-90deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateX(-90deg) rotateY(360deg);
+  }
 }
 
 .node-1 {

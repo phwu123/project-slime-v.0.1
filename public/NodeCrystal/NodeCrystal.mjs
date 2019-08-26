@@ -1,6 +1,6 @@
 const nodeCrystalTemplate = `
   <link rel="stylesheet" type="text/css" href="./NodeCrystal/NodeCrystal.css" />
-  <section class="scene dev-tilt">
+  <section class="scene">
     <article class="crystal dev-rotate">
       <div class="crystal__hemisphere crystal__top">
         <span class="crystal__face crystal__face-top-front"></span>
@@ -22,8 +22,8 @@ const nodeCrystalTemplate = `
 // 67.38, 22.62, 90
 // 5 * 2^(1/2) - 12
 
-customElements.define('node-crystal', 
-  class nodeCrystal extends HTMLElement {
+customElements.define('node-crystal',
+  class NodeCrystal extends HTMLElement {
     constructor() {
       super()
       this.attachShadow({ mode: 'open' })
