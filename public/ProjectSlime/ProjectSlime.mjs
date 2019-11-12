@@ -3,7 +3,7 @@ const projectSlimeTemplate = `
   <node-ring></node-ring>
   <node-crystal></node-crystal>
 `
-customElements.define('project-slime', 
+customElements.define('project-slime',
   class ProjectSlime extends HTMLElement {
     constructor() {
       super()

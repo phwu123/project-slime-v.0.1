@@ -1,7 +1,5 @@
-
-
-{/* <link rel="stylesheet" type="text/css" href="./NodeRing/NodeRing.css" /> */}
 const nodeRingTemplate = `
+  <link rel="stylesheet" type="text/css" href="./NodeRing/NodeRing.css" />
   <section class="scene scene-tilt">
     <article class="ring-container">
       <div class="class-ring">
@@ -18,15 +16,7 @@ customElements.define('node-ring',
     constructor() {
       super()
       this.attachShadow({ mode: 'open' })
-      const styles = document.createElement('link')
-      styles.rel = 'stylesheet'
-      styles.type = 'text/css'
-      styles.href = './NodeRing/NodeRing.css'
-      this.shadowRoot.appendChild(styles)
-      const parser = new DOMParser()
-      const template = parser.parseFromString(nodeRingTemplate, 'text/html')
-      this.shadowRoot.appendChild(template.documentElement)
-     // this.shadowRoot.innerHTML = nodeRingTemplate
+      this.shadowRoot.innerHTML = nodeRingTemplate
     }
   }
 )

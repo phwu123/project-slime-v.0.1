@@ -17,7 +17,7 @@
   color: transparent;
   transition: transform 0.5s linear;
   transform-style: preserve-3d;
-  transform: translateZ(-25px);
+  transform: translate3d(0, 0, -25px);
 }
 
 .dev-rotate {
@@ -40,60 +40,60 @@
 }
 
 .crystal__top {
-  transform: rotateX(0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
 }
 
 .crystal__face-top-front {
-  transform: rotateY(0deg) rotateX(22.62deg);
+  transform: rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent blue transparent;
 }
 
 .crystal__face-top-right {
-  transform: rotateY(90deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent red transparent;
 }
 
 .crystal__face-top-back {
-  transform: rotateY(180deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 180deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent green transparent;
 }
 
 .crystal__face-top-left {
-  transform: rotateY(270deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 270deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent yellow transparent;
 }
 
 
 .crystal__bottom {
-  transform: rotateX(180deg);
+  transform: rotate3d(1, 0, 0, 180deg);
 }
 
 .crystal__face-bottom-front {
-  transform: rotateY(0deg) rotateX(22.62deg);
+  transform: rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent red transparent;
 }
 
 .crystal__face-bottom-right {
-  transform: rotateY(90deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 90deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent blue transparent;
 }
 
 .crystal__face-bottom-back {
-  transform: rotateY(180deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 180deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent green transparent;
 }
 
 .crystal__face-bottom-left {
-  transform: rotateY(270deg) rotateX(22.62deg);
+  transform: rotate3d(0, 1, 0, 270deg) rotate3d(1, 0, 0, 22.62deg);
   border-color: transparent transparent yellow transparent;
 }
 
 @keyframes dev-spin {
   0% {
-    transform: translateZ(-25px) rotateY(0deg);
+    transform: translate3d(0, 0, -25px);
   }
 
   100% {
-    transform: translateZ(-25px) rotateY(360deg);
+    transform: translate3d(0, 0, -25px) rotate3d(0, 1, 0, 360deg);
   }
 }
